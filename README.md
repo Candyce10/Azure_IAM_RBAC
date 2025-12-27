@@ -1,7 +1,7 @@
 # Cloud IAM Lab — Azure RBAC & Identity Management
 
 ## Overview
-This lab demonstrates hands-on implementation of **cloud Identity and Access Management (IAM)** using Microsoft Azure and Microsoft Entra ID. The focus is on **group-based RBAC**, **least privilege**, and **access validation** across different user roles.
+This lab demonstrates hands-on implementation of cloud Identity and Access Management (IAM) using Microsoft Azure and Microsoft Entra ID. The focus is on group-based RBAC, least privilege, and access validation across different user roles.
 
 The lab simulates a small organization with distinct user roles and validates access behavior using real Azure resources.
 
@@ -10,7 +10,7 @@ The lab simulates a small organization with distinct user roles and validates ac
 ---
 
 ## Architecture & Identity Model
-The identity layer was implemented using **Microsoft Entra ID**, with users and security groups representing organizational roles.
+The identity layer was implemented using Microsoft Entra ID, with users and security groups representing organizational roles.
 
 ### Identities Created
 - HR user (read-only access)
@@ -22,7 +22,7 @@ The identity layer was implemented using **Microsoft Entra ID**, with users and 
 - Cloud-Finance-Read  
 - Cloud-IT-Admin  
 
-All access is granted **via groups**, not directly to users, following IAM best practices.
+All access is granted via groups, not directly to users, following IAM best practices.
 
 <br>
 <img width="1920" height="923" alt="Entra ID Users" src="https://github.com/user-attachments/assets/7fc0eead-696e-4b6d-acd9-3b32e61ece9b" />
@@ -33,20 +33,20 @@ All access is granted **via groups**, not directly to users, following IAM best 
 ---
 
 ## Azure RBAC Design
-Authorization is enforced using **Azure Role-Based Access Control (RBAC)** at the **resource level**.
+Authorization is enforced using Azure Role-Based Access Control (RBAC) at the resource level.
 
 ### Resource Used
 - Azure Storage Account  
 - Scope: This resource only (not subscription-wide)
 
 ### RBAC Assignments
-- **Reader** → Cloud-HR-Read  
-- **Storage Blob Data Reader** → Cloud-HR-Read  
-- **Contributor** → Cloud-IT-Admin  
+- Reader → Cloud-HR-Read  
+- Storage Blob Data Reader → Cloud-HR-Read  
+- Contributor → Cloud-IT-Admin  
 
 This design separates:
-- **Management-plane access** (Reader / Contributor)
-- **Data-plane access** (Storage Blob Data Reader)
+- Management-plane access (Reader / Contributor)
+- Data-plane access (Storage Blob Data Reader)
 
 <br>
 <img width="1863" height="848" alt="IAM Role Assignments" src="https://github.com/user-attachments/assets/4969f2a5-aa9d-4a13-b0cf-343552e6a324" />
@@ -58,13 +58,13 @@ This design separates:
 ## 👤 Access Validation & Least Privilege
 Access was validated by signing in as different users and confirming expected behavior.
 
-### HR User (`hr.cloud`)
+### HR User (hr.cloud)
 - Can view the storage account
 - Cannot modify settings
 - Cannot assign roles
 - Cannot perform administrative actions
 
-This confirms **read-only access** and least-privilege enforcement.
+This confirms read-only access and least-privilege enforcement.
 
 <br>
 <img width="1920" height="920" alt="storage account visible by HR" src="https://github.com/user-attachments/assets/c88c5bfe-be07-44bc-afd3-0e87eadc80b0" />
@@ -76,12 +76,12 @@ This confirms **read-only access** and least-privilege enforcement.
 
 ---
 
-### IT Admin User (`it.admin`)
+### IT Admin User (it.admin)
 - Can manage storage account configuration
 - Cannot modify RBAC role assignments
 - Restricted from identity security policy management
 
-This enforces **separation of duties** between resource administrators and access administrators.
+This enforces separation of duties between resource administrators and access administrators.
 
 <br>
 <img width="1918" height="922" alt="IT account contributor" src="https://github.com/user-attachments/assets/7f56ff87-4cbf-4be0-9eef-ac4602174738" />
@@ -113,7 +113,7 @@ This enforces **separation of duties** between resource administrators and acces
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 - Extend lab with IAM governance (access reviews)
 - Implement AWS IAM for cross-cloud comparison
 - Explore Conditional Access when licensing permits
