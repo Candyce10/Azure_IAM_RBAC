@@ -3,7 +3,7 @@
 ## Overview
 This lab demonstrates hands-on implementation of cloud Identity and Access Management (IAM) using Microsoft Azure and Microsoft Entra ID. The focus is on group-based RBAC, least privilege, and access validation across different user roles.
 
-The lab simulates a small organization with distinct user roles and validates access behavior using real Azure resources.
+The lab simulates a small organization with specific user roles and validates access behavior using real Azure resources.
 
 <br>
 
