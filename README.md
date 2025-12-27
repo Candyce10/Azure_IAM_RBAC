@@ -1,4 +1,4 @@
-# Cloud IAM Lab — Azure RBAC & Identity Management
+# Cloud IAM Lab: Azure RBAC & Identity Management
 
 ## Overview
 This lab demonstrates hands-on implementation of cloud Identity and Access Management (IAM) using Microsoft Azure and Microsoft Entra ID. The focus is on group-based RBAC, least privilege, and access validation across different user roles.
@@ -7,7 +7,7 @@ The lab simulates a small organization with distinct user roles and validates ac
 
 <br>
 
----
+
 
 ## Architecture & Identity Model
 The identity layer was implemented using Microsoft Entra ID, with users and security groups representing organizational roles.
@@ -30,7 +30,7 @@ All access is granted via groups, not directly to users, following IAM best prac
 
 <br>
 
----
+
 
 ## Azure RBAC Design
 Authorization is enforced using Azure Role-Based Access Control (RBAC) at the resource level.
@@ -53,7 +53,7 @@ This design separates:
 
 <br>
 
----
+
 
 ## 👤 Access Validation & Least Privilege
 Access was validated by signing in as different users and confirming expected behavior.
@@ -74,7 +74,7 @@ This confirms read-only access and least-privilege enforcement.
 
 <br>
 
----
+
 
 ### IT Admin User (it.admin)
 - Can manage storage account configuration
@@ -89,7 +89,7 @@ This enforces separation of duties between resource administrators and access ad
 
 <br>
 
----
+
 
 ## IAM Concepts Demonstrated
 - Cloud identity management using Microsoft Entra ID  
@@ -101,7 +101,7 @@ This enforces separation of duties between resource administrators and access ad
 
 <br>
 
----
+
 
 ## Lessons Learned
 - Azure RBAC role assignment requires elevated permissions (Owner/User Access Administrator)
@@ -111,7 +111,7 @@ This enforces separation of duties between resource administrators and access ad
 
 <br>
 
----
+
 
 ## Next Steps
 - Extend lab with IAM governance (access reviews)
@@ -120,7 +120,7 @@ This enforces separation of duties between resource administrators and access ad
 
 <br>
 
----
+
 
 **Author:**  
 Built as part of hands-on Cloud IAM skill development.
